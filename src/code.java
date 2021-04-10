@@ -1,22 +1,23 @@
-package proyectoparcial1;
+//package proyectoparcial1;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+
 import java.util.Scanner;
 
-public class Datospersonales {
+public class code{
+ public static void main(String[] args) {
+     String nombre = "";
+     String apellidos = "";
+     String telefono = "";
+     int edad;
+     String correo = "";
+     String codigo = "";
+    //ArrayList<personas> persona = new ArrayList<>();
+   // personas p = new personas();
 
-    private String nombre = "";
-    private String apellido = "";
-    private String telefono = "";
-    private int edad;
-    private String correo = "";
-    ArrayList<personas> persona = new ArrayList<>();
-    personas p = new personas();
-
-    public Datospersonales() {
+    //public code() {
         System.out.println("Datos personales");
-    }
+    
 
     public void menu() {
         Scanner sc = new Scanner(System.in);
@@ -26,7 +27,7 @@ public class Datospersonales {
 
         do {
             System.out.println("\nMenu de opciones");
-            System.out.println("1. Capturar datos");
+            System.out.println("1. agregar al cliente: ");
             System.out.println("2. Mostrar datos");
             System.out.println("3.salir");
             System.out.println("4. editar");

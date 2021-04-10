@@ -2,45 +2,37 @@
 import java.util.Scanner;
 
 public class practica5 {
+    public static void main (String[] args){
+    Scanner sc = new Scanner (System.in);
+    
+    int num = 0;
+    int poc[] = new int[10];
+    int x = 0;
+    boolean Esta = false;
+    
+    
+    for (int i = 0; i < 10; i++) {
+            System.out.print("Introduzca los números: ");
+            poc[i] = Integer.parseInt(sc.nextLine());
 
-    static Scanner teclado = new Scanner(System.in);
-
-    public static int main(String[] args) {
-
-        float arreglo[] = new float[10];
-        int posicionDeElementoBuscado;
-        posicionDeElementoBuscado = existeenelarreglo(arreglo);
-
-        for (int i = 0; i < 10; i++) {
-            System.out.print("Ingresa los numeros ");
-            arreglo[i] = Integer.parseInt(teclado.nextLine());
         }
-        System.out.println("¿Que numero deseas buscar: ");
         
-        for (int x = 0; x < arreglo.length; x++) {
-            float busqueda = 0;
-            if (arreglo[x] == busqueda) {
-                return x;
+        
+        System.out.print("¿Qué número desea buscar? ");
+        int numero;
+        numero=sc.nextInt();
+
+        for(x=0;x<poc.length;x++){
+            if (numero == poc[x]) {
+                System.out.println("El índice del valor '"+numero+"' es: "+(x));
+                Esta = true;
             }
         }
-        return -1;
 
-        if (posicionDeElementoBuscado == -1) {
-            System.out.println("El elemento NO existe en el arreglo");
-        } else {
-            System.out.println("El elemento existe en la posición: " + posicionDeElementoBuscado);
+        if(Esta ==false) {
+            System.out.println("-1");
         }
-        return (0);
-
+        
     }
-
-    private static int existeEnArreglo(float[] arreglo) {
-        int posicionDeElementoBuscado = 0;
-        return (posicionDeElementoBuscado);
-
-    }
-
-    private static int existeenelarreglo(float[] arreglo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
